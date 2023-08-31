@@ -65,13 +65,14 @@ export default class CrosspayChannel extends EPNSChannel {
     })
   }
 
+  // usecase 1.1
   async getTxInitiated(sender, receiver, amount, chain, simulate) {
     try {
       this.logInfo("Getting events ---> TxInitiated");
       const crosspayContract = await this.getContract(crosspayAddress, crosspayAbi);
 
       const title = "TxInitiated Event Title";
-      const payloadTitle = "TxInitiated Event Payload Title";
+      const payloadTitle = `Incoming Payment🎉. Sender ${sender}`;
       const message = `Message: ${sender} is trying to send you(${receiver}) ${amount} of aUSDC in ${chain} chain.`;
       const payloadMsg = `Payload Message: ${sender} is trying to send you(${receiver}) ${amount} of aUSDC in ${chain} chain.`;
 
@@ -94,13 +95,14 @@ export default class CrosspayChannel extends EPNSChannel {
     }
   }
 
+  // usecase 1.2
   async getTxAccepted(sender, receiver, amount, chain, simulate) {
     try {
       this.logInfo("Getting events ---> TxInitiated");
       const crosspayContract = await this.getContract(crosspayAddress, crosspayAbi);
 
       const title = "TxAccepted Event Title";
-      const payloadTitle = "TxAccepted Event Payload Title";
+      const payloadTitle = `Payment Accepted🎉. Sender ${receiver}`;
       const message = `Message: ${receiver} has accepted ${amount} of aUSDC in ${chain} chain.`;
       const payloadMsg = `Payload Message: ${receiver} has accepted ${amount} of aUSDC in ${chain} chain.`;
 
@@ -122,13 +124,14 @@ export default class CrosspayChannel extends EPNSChannel {
     }
   }
 
+  // usecase 1.3
   async getTxApproved(sender, receiver, amount, chain, simulate) {
     try {
       this.logInfo("Getting events ---> TxApproved");
       const crosspayContract = await this.getContract(crosspayAddress, crosspayAbi);
 
       const title = "TxApproved Event Title";
-      const payloadTitle = "TxApproved Event Payload Title";
+      const payloadTitle = `Payment Approved🎉. Sender ${sender}`;
       const message = `Message: ${sender} has approved your(${receiver}) transaction for ${amount} of aUSDC in ${chain} chain.`;
       const payloadMsg = `Payload Message: ${sender} has approved your(${receiver}) transaction for ${amount} of aUSDC in ${chain} chain.`;
 
