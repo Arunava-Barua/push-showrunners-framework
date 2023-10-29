@@ -1,7 +1,0 @@
-{
-    "PRIVATE_KEY_NEW_STANDARD": {
-        "PK": "5975e79c6ed47a4046027bd1bf6a9e14117e17997ba8f77b021dbefee769cd0a",
-        "CHAIN_ID": "eip155:5" 
-    },
-    "PRIVATE_KEY_OLD_STANDARD": "5975e79c6ed47a4046027bd1bf6a9e14117e17997ba8f77b021dbefee769cd0a"
-  }

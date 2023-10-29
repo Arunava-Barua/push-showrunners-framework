@@ -2,11 +2,9 @@ import logger from '../../loaders/logger';
 
 import { Container } from 'typedi';
 import schedule from 'node-schedule';
-import crosspayChannel from './crosspayChannel';
+import bankChannel from './bankChannel';
 
 export default () => {
-  const channel = Container.get(crosspayChannel);
+  const channel = Container.get(bankChannel);
   channel.startEventListener(false);
 };
-
-

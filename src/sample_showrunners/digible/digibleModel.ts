@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { model, Document, Schema } from 'mongoose';
+import { model, Document, Schema } from 'mongoose'; 
+// import mongoose from "mongoose", mongoose.model, mongoose.Schema, mongoose.Document
 
 export interface DigibleData {
   latestBlockForDigiTrackEvent?: number;
@@ -17,7 +18,7 @@ const digibleSchema = new Schema<DigibleData>({
   },
   latestBlockForOfferRecieved: {
     type: Number,
-  },
+  }, 
   latestBlockForOfferAccepted: {
     type: Number,
   },
